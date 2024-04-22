@@ -8,7 +8,7 @@ const debug = _debug('vite-svg-loader')
 module.exports = function svgLoader (options = {}) {
   const { svgoConfig, svgo, defaultImport } = options
 
-  const svgRegex = /\.svg(\?(raw|component|skipsvgo))?$/
+  const svgRegex = /(?:\.svg|\.blade\.php)(\?(raw|component|skipsvgo))?$/
 
   return {
     name: 'svg-loader',
